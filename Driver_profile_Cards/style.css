@@ -1,0 +1,32 @@
+.body   {
+   background-color: aquamarine; 
+}
+
+.container {
+    background-color: black;
+    display: flex;
+}
+
+.portrait {
+    border-radius: 25px;
+    border: solid;
+    box-shadow: 50px;
+}
+
+.cards {
+    background-color: grey;
+
+}
+/* portrait is the container holding the picutre of the dirver and the actual img is in its own container.  */
+.profile-img {
+    border-radius: 45px;
+}
+
+
+.stats_box {
+    /* inside the stats box will be multile data points be aware that the points will be mapped out and will need to be called upon siumtaneously. */
+}
+
+#stat {
+    /* these will be the uniform  */
+}
