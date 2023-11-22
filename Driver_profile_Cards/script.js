@@ -11,4 +11,19 @@ stats =
 
 get.querrySelector.stats_container 
 
-map.stats.driver. 
+
+function getDriverStats() => {
+    var stats = JSON.parse(localStorage.getItem("driver.stats"));
+    if ({driver.name === driver.name}) {
+        document.querrySelector("stats.wins").textContent = name.wins
+    }
+    else ({driver.name === driver.name}) {
+        document.querrySelector("stats.pole_percentage").textContent = name.wins
+    }
+    if ({driver.name === driver.name}) {
+        document.querrySelector("stats.pole_starts").textContent = name.wins
+    }
+    else ({driver.name === driver.name}) {
+        document.querrySelector("stats.points").textContent = name.wins
+    }
+}

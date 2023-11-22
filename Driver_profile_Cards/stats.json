@@ -1,0 +1,74 @@
+{
+  "drivers": [
+    {
+      "name": "Lewis Hamilton",
+      "wins": 100,
+      "pole_percentage": 30,
+      "poles_starts": 120,
+      "points": 300
+    },
+    {
+      "name": "Max Verstappen",
+      "wins": 20,
+      "pole_percentage": 15,
+      "poles_starts": 50,
+      "points": 250
+    },
+    {
+      "name": "Valtteri Bottas",
+      "wins": 10,
+      "pole_percentage": 10,
+      "poles_starts": 40,
+      "points": 180
+    },
+    {
+      "name": "Charles Leclerc",
+      "wins": 5,
+      "pole_percentage": 8,
+      "poles_starts": 30,
+      "points": 160
+    },
+    {
+      "name": "Sebastian Vettel",
+      "wins": 4,
+      "pole_percentage": 5,
+      "poles_starts": 25,
+      "points": 120
+    },
+    {
+      "name": "Lando Norris",
+      "wins": 2,
+      "pole_percentage": 3,
+      "poles_starts": 15,
+      "points": 100
+    },
+    {
+      "name": "Daniel Ricciardo",
+      "wins": 3,
+      "pole_percentage": 4,
+      "poles_starts": 20,
+      "points": 110
+    },
+    {
+      "name": "Fernando Alonso",
+      "wins": 1,
+      "pole_percentage": 2,
+      "poles_starts": 10,
+      "points": 80
+    },
+    {
+      "name": "Esteban Ocon",
+      "wins": 0,
+      "pole_percentage": 1,
+      "poles_starts": 5,
+      "points": 60
+    },
+    {
+      "name": "Carlos Sainz",
+      "wins": 2,
+      "pole_percentage": 3,
+      "poles_starts": 18,
+      "points": 95
+    }
+  ]
+}
