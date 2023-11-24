@@ -17,7 +17,7 @@
 
 .cards {
     background-color: grey;
-
+    display: flex;
 }
 /* portrait is the container holding the picutre of the dirver and the actual img is in its own container.  */
 .profile-img {
