@@ -1,12 +1,12 @@
 {
-  "drivers": [
+  "driverStats": [
     {
       "name": "Lewis Hamilton",
       "wins": 100,
       "pole_percentage": 30,
       "poles_starts": 120,
       "points": 300
-    },
+    }, 
     {
       "name": "Max Verstappen",
       "wins": 20,
