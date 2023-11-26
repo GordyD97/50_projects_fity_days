@@ -1,49 +1,63 @@
+function displayDriverProfile() {
+    const selectedDriver = document.getElementById("driver-names").value;
+    fetch("./stats.json") // Assuming your JSON file is named "stats.json" in the same directory
+        .then(response => response.json())
+        .then(data => {
+            const driverData = getDriverData(selectedDriver, data.driverStats);
 
-
-async function fetchData() {
-    try {
-        // Fetch the JSON data
-        const response = await fetch('stats.json');
-
-        // Parse the JSON data
-        const allDriverStats = await response.json();
-
-        // Assuming "driver" is an HTML element, you might want to get its value, not its name
-        let selectedDriver = document.getElementById("driverStats").value;
-
-        // Check if a driver is selected
-        if (selectedDriver) {
-            // Get the selected driver's stats
-            let driverStats = allDriverStats[selectedDriver];
-
-            // Check if stats are available
-            if (driverStats) {
-                // Store the selected driver's stats in localStorage
-                localStorage.setItem("driverStats", JSON.stringify(driverStats));
-
-                // Render the stats on the page
-                renderStats(driverStats);
-            } else {
-                console.error("Driver stats not available");
-            }
-        } else {
-            console.error("No driver selected");
-        }
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
+            // Display the selected driver's profile image, description, and stats
+            document.querySelector(".profile-img").style.backgroundImage = `url(${driverData.image})`;
+            document.querySelector(".description").textContent = driverData.description;
+            document.getElementById("wins").textContent = `Wins: ${driverData.wins}`;
+            document.getElementById("pole_percentage").textContent = `Pole Percentage: ${driverData.pole_percentage}%`;
+            document.getElementById("pole_starts").textContent = `Pole Starts: ${driverData.pole_starts}`;
+            document.getElementById("points").textContent = `Points: ${driverData.points}`;
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+        });
 }
 
-function renderStats(driverStats) {
-    // Assuming you have elements with the class "stat-1", "stat-2", etc.
-    document.querySelector(".stat-1").textContent = `Driver: ${driverStats.name}`;
-    document.querySelector(".stat-2").textContent = `Wins: ${driverStats.wins}`;
-    document.querySelector(".stat-3").textContent = `Pole Percentage: ${driverStats.pole_percentage}%`;
-    document.querySelector(".stat-4").textContent = `Points: ${driverStats.points}`;
+function getDriverData(driverName, allDriverStats) {
+    // Find the data for the selected driver in the array
+    const selectedDriverData = allDriverStats.find(driver => driver.name === driverName);
+
+    // Return an object with image, description, and stats
+    return selectedDriverData || {};
 }
 
-// Call the fetchData function when your script loads
-fetchData();
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Fetch JSON data (replace 'drivers.json' with your actual file path)
+//     fetch('stats.json')
+//         .then(response => response.json())
+//         .then(data => {
+//             // Populate the driver selection dropdown
+//             const driverSelect = document.getElementById('driver-name');
+//             data.forEach(driver => {
+//                 const option = document.createElement('option');
+//                 option.value = driver.name;
+//                 option.textContent = driver.name;
+//                 driverSelect.appendChild(option);
+//             });
+
+//             // Add event listener to handle selection change
+//             driverSelect.addEventListener('change', () => {
+//                 const selectedDriver = data.find(driver => driver.name === driverSelect.value);
+//                 if (selectedDriver) {
+//                     // Display driver statistics
+//                     document.getElementById('driverName').textContent = selectedDriver.name;
+//                     document.getElementById('driverWins').textContent = selectedDriver.wins;
+//                     document.getElementById('driverPolePercentage').textContent = selectedDriver.pole_percentage;
+//                     document.getElementById('driverPoints').textContent = selectedDriver.points;
+//                 }
+//             });
+//         })
+//         .catch(error => console.error('Error fetching data:', error));
+// });
+
 
 
 

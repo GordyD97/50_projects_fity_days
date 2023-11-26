@@ -39,7 +39,32 @@ body   {
 /* enter short description to change in each driver.  */
 
 }
+/* below each id will share the same styles.  */
 
-#stat {
-    /* these will be the uniform  */
+#wins {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+
+}
+
+#pole_percentage {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+
+}
+
+#pole_starts {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+
+}
+
+#points {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+
 }

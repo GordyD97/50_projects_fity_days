@@ -9,52 +9,43 @@
     </title>
 </head>
 <body>
-    <div class="container">
+   <div class="container">
         <form>
-  Melon Type:
-    <select>
-      <option value="Lewis Hamilton">Lewis Hamilton</option>
-      <option value="Max Verstappen">Max Verstappen</option>
-      <option value="Valtteri Bottas">Valtteri Bottas</option>
-      <option value="Charles Leclerc">Charles Leclerc</option>
-      <option value="Sebastian Vettel">Sebastian Vettel</option>
-      <option value="Lando Norris">Lando Norris</option>
-      <option value="Daniel Ricciardo">Daniel Ricciardo</option>
-      <option value="Fernando Alonso">Fernando Alonso</option>
-      <option value="Esteban Ocon">Esteban Ocon</option>
-      <option value="Carlos Sainz">Carlos Sainz</option>
-    </select>
-</form>
+            Melon Type:
+            <select id="driver-names">
+                <option value="Lewis Hamilton">Lewis Hamilton</option>
+                <option value="Max Verstappen">Max Verstappen</option>
+                <option value="Valtteri Bottas">Valtteri Bottas</option>
+                <option value="Charles Leclerc">Charles Leclerc</option>
+                <option value="Sebastian Vettel">Sebastian Vettel</option>
+                <option value="Lando Norris">Lando Norris</option>
+                <option value="Daniel Ricciardo">Daniel Ricciardo</option>
+                <option value="Fernando Alonso">Fernando Alonso</option>
+                <option value="Esteban Ocon">Esteban Ocon</option>
+                <option value="Carlos Sainz">Carlos Sainz</option>
+            </select>
+        </form>
 
-<!-- enter pictures of each driver into the Json Data file  -->
-    <div class="cards">
-        <div class="portrait">
-            
-            <div class="profile-img">
-    
-            </div>
-            <h1>
-                Driver Profile
-            </h1>
-            <p class="description">
-                short description of driver
-            </p>
-        </div>
-
-        <div class="stats_box">
-            <div class="stats-container">
-                <h1> Stats</h1>
-                <p>{stats.wins}</p>
-                <p>{stats.pole_percentage}</p>
-                <p>{stats.pole_starts}</p>
-                <p>{stats.points}</p>
-            
+        <div class="cards">
+            <div class="portrait">
+                <div class="profile-img">
+                    <!-- Image of the selected driver will be displayed here -->
+                </div>
+                <h1>Driver Profile</h1>
+                <p class="description">Short description of driver</p>
             </div>
 
+            <div class="stats_box">
+                <div class="stats-container">
+                    <h1>Stats</h1>
+                    <p id="wins">Wins: </p>
+                    <p id="pole_percentage">Pole Percentage: </p>
+                    <p id="pole_starts">Pole Starts: </p>
+                    <p id="points">Points: </p>
+                </div>
+            </div>
         </div>
-
     </div>
-    </div>
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 </body>
 </html>
