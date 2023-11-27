@@ -1,16 +1,15 @@
 function displayDriverProfile() {
     const selectedDriver = document.getElementById("driver-names").value;
-    fetch("./stats.json") // Assuming your JSON file is named "stats.json" in the same directory
+    fetch("./stats.json")
         .then(response => response.json())
         .then(data => {
             const driverData = getDriverData(selectedDriver, data.driverStats);
 
-            // Display the selected driver's profile image, description, and stats
-            document.querySelector(".profile-img").style.backgroundImage = `url(${driverData.image})`;
-            document.querySelector(".description").textContent = driverData.description;
+            // Display the selected driver's stats
+            document.getElementById("driver-name").textContent = driverData.name;
             document.getElementById("wins").textContent = `Wins: ${driverData.wins}`;
             document.getElementById("pole_percentage").textContent = `Pole Percentage: ${driverData.pole_percentage}%`;
-            document.getElementById("pole_starts").textContent = `Pole Starts: ${driverData.pole_starts}`;
+            document.getElementById("pole_starts").textContent = `Pole Starts: ${driverData.poles_starts}`;
             document.getElementById("points").textContent = `Points: ${driverData.points}`;
         })
         .catch(error => {
@@ -22,7 +21,7 @@ function getDriverData(driverName, allDriverStats) {
     // Find the data for the selected driver in the array
     const selectedDriverData = allDriverStats.find(driver => driver.name === driverName);
 
-    // Return an object with image, description, and stats
+    // Return the selected driver's data
     return selectedDriverData || {};
 }
 
