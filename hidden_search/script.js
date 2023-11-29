@@ -1,9 +1,12 @@
-document.getQuerySelcetor("search-vis");
+const search = document.querySelector(".search");
+const btn = document.querySelector(".btn");
+const input = document.querySelector(".search");
 
 
-function showSearchBar () => {
-    
-    let onclick = ("search-hidden");
-}
+btn.addEventListener('click', () => {
+    search.classList.toggle('active')
+    input.focus()
+})
+
 
 // add smooth transition in css. 
